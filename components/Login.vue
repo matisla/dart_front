@@ -1,5 +1,5 @@
 <template>
-	<div id="login" class="rounded border p-3">
+	<div id="login" class="rounded border p-3" :hidden="isAuthenticated">
 		<h2 class="text-center">login</h2>
 		<form @submit.prevent="login">
 			<FormulateInput type="text"
@@ -37,7 +37,7 @@ export default {
 	},
 	computed: {
 		
-		mapGetters(['isAuthenticated'])
+		...mapGetters(['isAuthenticated'])
 	},
 	methods: {
 		login () {

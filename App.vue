@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="">
 		<h1 class="text-center">Dart Ultimate</h1>
 		<div class="row">
 			<div class="col">
@@ -8,7 +8,7 @@
 					<div class="col col-8"><GameList/></div>
 				</div>
 			</div>
-			<div class="col col-auto"><Login/></div>
+			<div class="col col-auto m-1"><Login/></div>
 		</div>
 	</div>
 </template>
