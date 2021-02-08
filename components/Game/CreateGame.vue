@@ -1,6 +1,6 @@
 <template>
 	<div class="rounded border p-3">
-		<h2 class="text-center">Create Game</h2>
+		<h2 class="text-center">Create game</h2>
 		<form action="" class="" @submit="createGame()">
 			<FormulateInput type="select"
 				:options="{301: 301, 501: 501, 701: 701 }"
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 
 export default {
 	name: "CreateGame",
@@ -40,8 +41,8 @@ export default {
 	},
 	methods: {
 		createGame () {
-			console.log(this.best_of, this.points, this.mode)
-			
+			const data = {best_of: this.best_of, points: this.points}
+			this.$store.dispatch("GAME_CREATE", data)
 		}
 	}
 }

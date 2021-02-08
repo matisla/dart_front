@@ -1,9 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import games from './modules/games.js'
+import users from './modules/users.js'
+import auth from './modules/auth.js'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-	modules: {},
-	strict: true,
+	modules: {
+		games: games,
+		users: users,
+		auth: auth,
+	}
 })
